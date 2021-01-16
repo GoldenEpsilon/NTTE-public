@@ -615,7 +615,7 @@
 	
 #define ntte_begin_step
 	 // Silver Tongue:
-	if(instance_exists(SkillIcon) && "ntte_lairmut" in GameCont && GameCont.ntte_lairmut){
+	if("ntte_lairmut" in GameCont && GameCont.ntte_lairmut && instance_exists(SkillIcon)){
 		GameCont.ntte_lairmut = false;
 		
 		var _skill = "silver tongue";

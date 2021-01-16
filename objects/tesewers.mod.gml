@@ -2543,11 +2543,15 @@ var _extraScale = argument_count > 1 ? argument[1] : 0.5;
 		if(active){
 			 // Notice Target:
 			if(
-				my_health < maxhealth
-				||
+				(!cantravel || sit) 
+				&&
 				(
-					instance_near(x, y, target, 128) &&
-					(instance_seen(x, y, target) || (instance_near(x, y, target, 96) && variable_instance_get(target, "reload", 0) > 0))
+					my_health < maxhealth
+					||
+					(
+						instance_near(x, y, target, 128) &&
+						(instance_seen(x, y, target) || (instance_near(x, y, target, 96) && variable_instance_get(target, "reload", 0) > 0))
+					)
 				)
 			){
 				cantravel = true;
