@@ -1276,7 +1276,7 @@
 	
 #define draw_sludge
 	if(instance_exists(CustomObject)){
-		var _instSludge = instances_matching(instances_matching(CustomObject, "name", "SludgePool"), "visible", true);
+		var _instSludge = instances_seen_nonsync(instances_matching(instances_matching(CustomObject, "name", "SludgePool"), "visible", true), 24, 24);
 		if(array_length(_instSludge)){
 			if(lag) trace_time();
 			
