@@ -1752,7 +1752,8 @@
 	var _scrt = array_combine(["", ""], _call);
 	with(ntte_mods_call){
 		if(mod_script_exists(self[0], self[1], _scrt[2])){
-			_scrt[0] = self[0];
+			mod_script_call_nc(self[0], self[1], _scrt[2], self[0], self[1]);
+			/*_scrt[0] = self[0];
 			_scrt[1] = self[1];
 			with(UberCont){
 				var _lag = other[2];
@@ -1761,7 +1762,7 @@
 				script_ref_call(_scrt);
 				
 				if(_lag) trace_time(array_join(_scrt, "_"));
-			}
+			}*/
 		}
 	}
 	
